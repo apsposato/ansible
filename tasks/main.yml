@@ -1,11 +1,15 @@
 ---
-# tasks file for helloworld
+# tasks file for create project
 
-- name: echo 'hello world'
-  command: echo "Hello {{ ocproject }}"
-  register: result
-
-- name: print message
-  debug:
-    msg: "{{ result.stdout_lines }}"
-
+- name: Create a project
+  openshift_raw:
+    api_version: v1
+    verify_ssl: no
+    host: https://openshift.dv.seccloud.internal:8443
+    username: "{{ oc_username }}"
+    password: "{{ oc_password }}"
+    kind: Project
+    name: "{{ ocproject }}"
+    description: "{{ ocproject }}"
+    display_name: "This is a test project for automation purpose"
+    state: present
