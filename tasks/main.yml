@@ -7,7 +7,7 @@
     verify_ssl: no
     username: "{{ oc_username }}"
     password: "{{ oc_password }}"
-    host: "https://openshift.dv.seccloud.internal"
+    host: "{{ api_url }}"
     kind: Project
     name: "{{ ocproject }}"
     state: present
