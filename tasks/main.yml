@@ -9,6 +9,6 @@
     password: "{{ oc_password }}"
     kind: Project
     name: "{{ ocproject }}"
-    ca_cert: "/root/ocp-certs/CA-root.cer"
+    ca_cert: "{{ ca_path }}"
     state: present
     validate_certs: no
