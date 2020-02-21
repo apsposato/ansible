@@ -1,15 +1,12 @@
 ---
 # tasks file for create project
-
-- name: Create a project
-  openshift_raw:
+- name: Create a k8
+  k8s:
+    api_version: v1
     state: present
+    name: "{{ocproject}}"
     host: "{{api_url}}"
     username: "{{oc_username}}"
     password: "{{oc_password}}"
-    definition:
-      api_version: v1
-      verify_ssl: no
-      kind: Namespace
-      metadata:
-        name: "{{ocproject}}"
+    kind: Namespace
+    validate_certs: no
