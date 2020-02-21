@@ -3,7 +3,6 @@
 - name: Create a Demo Project in RHOCP
   openshift_raw:
     api_version: v1
-    verify_ssl: no
     host: "{{ api_url }}"
     username: "{{ oc_username }}"
     password: "{{ oc_password }}"
@@ -11,4 +10,3 @@
     name: "{{ ocproject }}"
     ca_cert: "{{ ca_path }}"
     state: present
-    validate_certs: no
