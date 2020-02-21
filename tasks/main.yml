@@ -1,6 +1,6 @@
 ---
 # tasks file for create project
-- name: Create a 
+- name: Create a Demo Project in RHOCP
   openshift_raw:
     api_version: v1
     verify_ssl: no
@@ -9,5 +9,6 @@
     password: "{{ oc_password }}"
     kind: Project
     name: "{{ ocproject }}"
+    ca_cert: "/root/ocp-certs/CA-root.cer"
     state: present
     validate_certs: no
