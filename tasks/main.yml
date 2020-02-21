@@ -10,6 +10,4 @@
     password: "{{ oc_password }}"
     kind: Project
     name: "{{ ocproject }}"
-    description: "{{ ocproject }}"
-    display_name: "This is a test project for automation purpose"
     state: present
