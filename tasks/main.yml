@@ -5,9 +5,9 @@
   openshift_raw:
     api_version: v1
     verify_ssl: no
-    host: "https://openshift.dv.seccloud.internal"
     username: "{{ oc_username }}"
     password: "{{ oc_password }}"
+    host: "https://openshift.dv.seccloud.internal"
     kind: Project
     name: "{{ ocproject }}"
     state: present
